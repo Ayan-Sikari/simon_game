@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Simon Game</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href='https://fonts.googleapis.com/css?family=Original+Surfer&effect=emboss' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="style.css">
+
+  <audio id="clip1">
+  	<source src="https://s3.amazonaws.com/freecodecamp/simonSound1.mp3"></source>
+  </audio>
+  <audio id="clip2">
+  	<source src="https://s3.amazonaws.com/freecodecamp/simonSound2.mp3"></source>
+  </audio>
+  <audio id="clip3">
+  	<source src="https://s3.amazonaws.com/freecodecamp/simonSound3.mp3"></source>
+  </audio>
+  <audio id="clip4">
+  	<source src="https://s3.amazonaws.com/freecodecamp/simonSound4.mp3"></source>
+  </audio>
+</head>
+
+<body>
+  <nav>
+    <ul>
+      <li id="logo"><a href="index.html"><span class="entity">&hearts;</span><h4>SimonCraft</h1></a></li>
+      <li class="vanish" id="Home"><a href="#">Home</a></li>
+      <li class="vanish" id="About"><a href="#">About</a></li>
+      <li class="vanish" id="Services"><a href="">Services</a></li>
+      <li class="vanish" id="Contacts"><a href="#">Contact</a></li>
+      <li class="vanish" id="login"><a href="#">Login</a></li>
+      <li id="menu" onclick=opensidebar()><a href="#">&#9776</a></li>
+    </ul>
+    <ul id="sidebar">
+      <li onclick=closesidebar()><a href="#">&times;</a></li>
+      <li id="Home"><a href="#">Home</a></li>
+      <li id="About"><a href="#">About</a></li>
+      <li id="Services"><a href="#">Services</a></li>
+      <li id="Contacts"><a href="#">Contact</a></li>
+      <li id="login"><a href="#">Login</a></li>
+    </ul>
+  </nav>
+  <div id="outer-circle">
+    <div id="topleft"></div>
+    <div id="topright"></div>
+    <div id="bottomleft"></div>
+    <div id="bottomright"></div>
+    <div id="inner-circle">
+      <div id="title" class="font-effect-emboss"><span id="ltr-s">S</span><span id="ltr-i">I</span><span id="ltr-m">M</span><span id="ltr-o">O</span><span id="ltr-n">N</span>
+      </div>
+      <div id="switches">
+        <input type="checkbox" class="toggle" id="on">
+        <button class="button" id="start">Start</button>
+        <input type="checkbox" class="toggle" id="strict">
+      </div>
+      <div class="text1">
+        <span>POWER</span>
+        <span>STRICT</span>
+      </div>
+      <div id="turn"></div>
+      <div class="text2">COUNT</div>
+    </div>
+  </div>
+  <script  src="script.js"></script>
+</body>
+</html>
